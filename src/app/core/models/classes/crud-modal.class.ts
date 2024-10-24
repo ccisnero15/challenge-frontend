@@ -14,7 +14,7 @@ export abstract class CrudModal<T> {
     abstract formGroup: FormGroup
     protected entityId: number = this.config.data.id
     protected data: T = this.config.data.dataModal
-    private endpoint$: Observable<any> | undefined
+    private endpoint$: Observable<T> | undefined
 
     protected save(data: T) {
         this.endpoint$ = this.entityId ? this.api?.update(data, this.entityId) : this.api?.create(data)

@@ -50,14 +50,14 @@ Para ejecutar el proyecto en tu máquina local, sigue estos pasos:
 
 2. Abre tu navegador y accede a `http://localhost:4200/`.
 
-## Credenciales de prueba
+## 🔒 Credenciales de prueba
 
 Role: Admin
 
 -   Email: admin@admin.com
 -   Password: 123456
 -   Permisos: Read, Write, Delete
--   Puede ver todas las vistas.
+-   Puede ver todas las vistas de la plataforma.
 
 Role: User
 
@@ -65,3 +65,11 @@ Role: User
 -   Password: 123456
 -   Permisos: Read
 -   Sólo puede ver la vista de Posts.
+
+## 📝 Estructura del proyecto
+
+-   **Auth**: Carpeta destinada a manejar la autenticación del usuario.
+-   **Core**: Carpeta destinada a almacenar servicios, guardianes, interceptores, clases, interfaces y utilidades generales.
+-   **Features**: Carpeta destinada a almacenar las vistas y componentes de la aplicación según el modelo de negocio. Estas vistas describen la parte privada de la aplicación, es decir hay que estar autenticado para acceder a ellas.
+-   **Shared**: Carpeta destinada a almacenar componentes, servicios, modelos y estado, que tiene que ver con el modelo de negocio y son compartidos en todo el proyecto.
+-   **Styles**: Carpeta destinada a almacenar los estilos generales de la aplicación.
