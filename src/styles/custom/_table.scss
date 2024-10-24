@@ -29,7 +29,7 @@
 
                 &.p-highlight {
                     color: #ffff;
-                    background-color: #1d4ed8;
+                    background-color: #3b82f6;
                     border-radius: 0.5rem;
                 }
             }
@@ -69,83 +69,4 @@
             }
         }
     }
-
-    .p-datatable-tbody,
-    .p-datatable-thead,
-    .p-datatable-tfoot {
-        tr > td,
-        th {
-            // @include breakpoint-xs {
-            // 	&.hideOnXSmall {
-            // 		display: none;
-            // 	}
-            // }
-
-            // @include breakpoint-sm {
-            // 	&.hideOnSmall {
-            // 		display: none;
-            // 	}
-            // }
-
-            // @include breakpoint-md {
-            // 	&.hideOnMedium {
-            // 		display: none;
-            // 	}
-            // }
-
-            // @include breakpoint-lg {
-            // 	&.hideOnLarge {
-            // 		display: none;
-            // 	}
-            // }
-
-            // @include breakpoint-xl {
-            // 	&.hideOnXLarge {
-            // 		display: none;
-            // 	}
-            // }
-        }
-    }
-
-    // @include breakpoint-md {
-
-    // 	.p-datatable-table {
-    // 		border-spacing: 0 .5rem;
-    // 	}
-
-    // 	.p-datatable-tbody,
-    // 	.p-datatable-thead,
-    // 	.p-datatable-tfoot {
-    // 		tr > {
-
-    // 			td, th {
-    // 				padding: .5rem;
-    // 			}
-
-    // 			td {
-    // 				font-size: .75rem;
-    // 			}
-
-    // 			th {
-    // 				font-size: .875rem;
-    // 			}
-    // 		}
-    // 	}
-
-    // 	.p-paginator {
-    // 		justify-content: center;
-
-    // 		.p-paginator-pages {
-    // 			gap: 0.3125rem;
-
-    // 			.p-paginator-page {
-    // 				font-size: 12px;
-    // 				min-width:0;
-    // 				height: auto;
-    // 				width: auto;
-    // 				padding: 8px;
-    // 			}
-    // 		}
-    // 	}
-    // }
 }
