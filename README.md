@@ -73,3 +73,14 @@ Role: User
 -   **Features**: Carpeta destinada a almacenar las vistas y componentes de la aplicación según el modelo de negocio. Estas vistas describen la parte privada de la aplicación, es decir hay que estar autenticado para acceder a ellas.
 -   **Shared**: Carpeta destinada a almacenar componentes, servicios, modelos y estado, que tiene que ver con el modelo de negocio y son compartidos en todo el proyecto.
 -   **Styles**: Carpeta destinada a almacenar los estilos generales de la aplicación.
+
+## 🛠️ Tecnologías Utilizadas
+
+-   Angular - Framework para desarrollo frontend
+-   TypeScript - Superconjunto de JavaScript
+-   Signals - Manejo de estado
+-   PrimeNg - Librería de componentes UI
+-   PrimeIcons - Iconos de PrimeNg
+
+-   Gracias por su tiempo.
+-   Cisnero, César
