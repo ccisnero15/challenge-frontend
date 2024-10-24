@@ -82,6 +82,10 @@ Role: User
 -   PrimeNg - Librería de componentes UI
 -   PrimeIcons - Iconos de PrimeNg
 
+## Observaciones
+
+-   Al usar localstorage para persistir los datos del estado puede que suceda un error al cargar el proyecto, por lo cual antes de ejecutarlo es conveniente limpiar los datos guardados en el localstorage del navegador. En mi caso sucede ya que al trabajar con otros proyectos realizo la misma implementación.
+
 ## Gracias por su tiempo
 
 -   Cisnero, César
