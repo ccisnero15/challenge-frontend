@@ -1,0 +1,180 @@
+:host {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 12.5rem;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-start;
+    padding: 1.5rem;
+    gap: 0.5rem;
+    overflow-y: hidden;
+    z-index: 10;
+    transition: margin-left 0.5s cubic-bezier(0.36, -0.01, 0, 0.77);
+
+    @media screen and (max-width: 480px) {
+        background-color: #2a356d;
+
+        &:not(.is-open) {
+            margin-left: -200px;
+        }
+    }
+}
+
+.Sidebar-header {
+    max-height: 2rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.Sidebar-logo {
+    display: block;
+
+    @media screen and (max-width: 480px) {
+        display: none;
+    }
+}
+
+.Sidebar-closeIcon {
+    display: none;
+    width: 1.25rem;
+    cursor: pointer;
+
+    @media screen and (max-width: 480px) {
+        display: block;
+    }
+}
+
+.Sidebar-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .ProfileBtn {
+        @media screen and (max-width: 480px) {
+            display: none;
+        }
+    }
+
+    hr {
+        display: block;
+        margin: 0;
+        border: none;
+        border-top: 1px solid #eaebf0;
+
+        @media screen and (max-width: 480px) {
+            display: none;
+        }
+    }
+
+    .Logout {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        color: #2a356d;
+        background-color: transparent;
+        cursor: pointer;
+
+        .MenuIcon {
+            height: 1.25rem;
+            width: 1.25rem;
+            cursor: pointer;
+
+            &--logout {
+                background: url('/assets/svg/sidebar/logout.svg') no-repeat;
+                background-size: contain;
+
+                @media screen and (max-width: 480px) {
+                    background: url('/assets/svg/sidebar/mobile/logout.svg') no-repeat;
+                    background-size: contain;
+                }
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            color: #ffffff;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        gap: 1rem;
+    }
+}
+
+.Menu {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 3.5rem;
+    margin-bottom: 4rem;
+    margin-top: 3rem;
+    overflow-y: auto;
+    scrollbar-width: none;
+
+    &-item {
+        &:has(.Menu-item-link > .MenuIcon--qr) {
+            display: none;
+
+            @media screen and (max-width: 480px) {
+                display: block;
+            }
+        }
+    }
+
+    &-item-link {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #2a356d;
+        font-size: 0.875rem;
+
+        &.active {
+            span {
+                font-weight: 600;
+            }
+        }
+
+        .MenuIcon {
+            height: 1.25rem;
+            width: 1.25rem;
+            cursor: pointer;
+
+            $iconPath: '/assets/svg/sidebar/';
+            $iconPathMobile: '/assets/svg/sidebar/mobile/';
+            $menuIcons: 'home', 'qr', 'foro', 'obras-sociales', 'cuenta', 'mensajes-directos';
+
+            @each $menuIcon in $menuIcons {
+                &--#{$menuIcon} {
+                    background: url($iconPath + $menuIcon + '.svg') no-repeat;
+                    background-size: contain;
+
+                    @media screen and (min-width: 480px) {
+                        &.is-active {
+                            background: url($iconPath + $menuIcon + '-active.svg') no-repeat;
+                            background-size: contain;
+                        }
+                    }
+
+                    @media screen and (max-width: 480px) {
+                        background: url($iconPathMobile + $menuIcon + '.svg') no-repeat;
+                        background-size: contain;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        &-item-link {
+            color: #ffffff;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        gap: 1.75rem;
+        margin-bottom: 2rem;
+        margin-top: 1.5rem;
+    }
+}

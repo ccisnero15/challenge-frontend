@@ -1,0 +1,5 @@
+@if (hasErrors) {
+    @for(error of controlErrors; track error){
+        <small class="p-invalid">{{ getErrorMessage(error) }}</small>
+    }
+}

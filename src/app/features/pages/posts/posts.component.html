@@ -1,0 +1,40 @@
+<div class="card">
+    <h2>Posts</h2>
+    <p-table
+        [value]="records"
+        [paginator]="true"
+        [rows]="10"
+        [rowsPerPageOptions]="[10, 15, 20]"
+        responsiveLayout="stack"
+        [breakpoint]="'960px'"
+        [tableStyle]="{ 'min-width': '50rem' }"
+    >
+        <ng-template pTemplate="header">
+            <tr>
+                <th style="width: 5%">Id</th>
+                <th style="width: 25%">Title</th>
+                <th style="width: 45%">Body</th>
+                <th style="width: 25%">Actions</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-record>
+            <tr>
+                <td class="p-column-title">
+                    <span>{{ record.id }}</span>
+                </td>
+                <td class="p-column-title">
+                    <span>{{ record.title }}</span>
+                </td>
+                <td class="p-column-title">
+                    <span>{{ record.body }}</span>
+                </td>
+                @if (authStateService.hasWritePermission()) {
+                <td class="ActionColumn">
+                    <p-button icon="pi pi-pencil" [rounded]="true" class="mr-2" (onClick)="openCrudModal(record, record.id)" />
+                    <p-button icon="pi pi-times" [rounded]="true" severity="danger" (onClick)="deleteRecord(record.id, record.title)" />
+                </td>
+                }
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

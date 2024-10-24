@@ -1,0 +1,8 @@
+<form [formGroup]="formGroup">
+    <input-text controlName="title" label="Title" />
+    <input-text-area controlName="body" label="Body" />
+</form>
+<footer class="ButtonFooter">
+    <p-button pButton type="button" label="Save" icon="pi pi-check" (click)="onSubmit()"></p-button>
+    <p-button pButton type="button" label="Close" icon="pi pi-times" (click)="onClose()"></p-button>
+</footer>

@@ -1,0 +1,17 @@
+// form,
+// input,
+// textarea,
+// select,
+// button,
+// label {
+//     font-family: inherit;
+//     hyphens: auto;
+//     display: block;
+//     appearance: none;
+// }
+* {
+    font-family: 'Inter', sans-serif;
+}
+body {
+    overflow: hidden; // Ocultar la barra de desplazamiento del cuerpo
+}

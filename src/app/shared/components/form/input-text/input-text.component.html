@@ -1,0 +1,3 @@
+<label [for]="controlName()" class="InputLabel">{{ label() }}</label>
+<input pInputText [formControlName]="controlName()" type="text" [placeholder]="placeholder()" />
+<validator [controlName]="controlName()" [customErrMsg]="customErrMsg()" />

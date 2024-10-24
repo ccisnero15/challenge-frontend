@@ -1,0 +1,44 @@
+.Login {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'header'
+        'form'
+        'footer';
+    grid-template-rows: auto;
+    gap: 2rem;
+    align-items: center;
+    max-width: 25rem;
+    min-width: 23rem;
+    border: 0.0625rem solid rgba(0, 0, 0, 0.1);
+    padding: 1.25rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 0.3125rem;
+
+    &-header {
+        grid-area: header;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .Title {
+            color: #2a356d;
+            font-weight: 600;
+        }
+    }
+
+    &-form {
+        grid-area: form;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    &-footer {
+        grid-area: footer;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+}

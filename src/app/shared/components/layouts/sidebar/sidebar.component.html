@@ -1,0 +1,24 @@
+<section class="Sidebar-header">
+    <img src="/assets/svg/sidebar/close.svg" alt="Close Sidebar Icon" class="Sidebar-closeIcon" (click)="toggleSidebar($event)" />
+    <img src="/assets/svg/brand/imagotipo.svg" alt="Medicenter Plus Logo" class="Sidebar-logo" />
+</section>
+
+<ul role="navigation" class="Menu">
+    @for(item of menu; track item.name){
+    <li class="Menu-item" (click)="toggleSidebar($event)">
+        <a [routerLink]="item.route" routerLinkActive="active" class="Menu-item-link" #rla="routerLinkActive">
+            <i class="MenuIcon" [ngClass]="[item.iconClass ? 'MenuIcon--' + item.iconClass : '', rla.isActive ? 'is-active' : '']"></i>
+            <span>{{ item.name }}</span>
+        </a>
+    </li>
+    }
+</ul>
+
+<footer class="Sidebar-footer">
+    <!-- <profile-btn /> -->
+    <hr class="Divider" />
+    <button class="Logout" (click)="logout()">
+        <i class="MenuIcon MenuIcon--logout"></i>
+        <span>Cerrar Sesión</span>
+    </button>
+</footer>
