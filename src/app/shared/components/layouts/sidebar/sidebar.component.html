@@ -13,7 +13,7 @@
     @for(item of menu; track item.name){
     <li class="Menu-item" (click)="toggleSidebar($event)">
         <a [routerLink]="item.route" routerLinkActive="active" class="Menu-item-link" #rla="routerLinkActive">
-            <i class="pi pi-inbox"></i>
+            <i [class]="item.icon"></i>
             <span>{{ item.name }}</span>
         </a>
     </li>
