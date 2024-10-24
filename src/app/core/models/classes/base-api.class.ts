@@ -11,19 +11,19 @@ export abstract class BaseApi<T> {
 
     getPaginatedList() {
         const url = `${this.apiUrl}${this.pathName}`
-        return this.httpClient.get<any>(url, { headers: this.headers }).pipe(takeUntilDestroyed(this.destroyRef))
+        return this.httpClient.get<T[]>(url, { headers: this.headers }).pipe(takeUntilDestroyed(this.destroyRef))
     }
 
     update<ReqType = T, ResType = T>(data: ReqType, id: number) {
         const url = `${this.apiUrl}${this.pathName}/${id}`
         const body = JSON.stringify(data)
-        return this.httpClient.put<any>(url, body, { headers: this.headers })
+        return this.httpClient.put<T>(url, body, { headers: this.headers })
     }
 
     create<ReqType = T, ResType = T>(data: ReqType) {
         const url = `${this.apiUrl}${this.pathName}`
         const body = JSON.stringify(data)
-        return this.httpClient.post<any>(url, body, { headers: this.headers })
+        return this.httpClient.post<T>(url, body, { headers: this.headers })
     }
 
     delete(id: number) {

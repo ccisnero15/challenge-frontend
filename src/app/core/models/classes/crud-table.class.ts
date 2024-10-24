@@ -1,4 +1,4 @@
-import { ActivatedRoute, Router } from '@angular/router'
+import { Router } from '@angular/router'
 import { BaseApi } from './base-api.class'
 import { inject } from '@angular/core'
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog'
@@ -7,7 +7,6 @@ import { ConfirmationService, MessageService } from 'primeng/api'
 export abstract class CrudTable<T> {
     abstract api: BaseApi<T>
     protected modalComponent: any
-    private activatedRoute = inject(ActivatedRoute)
     protected dialogService = inject(DialogService)
     protected confirmationService = inject(ConfirmationService)
     protected messageService = inject(MessageService)
@@ -20,21 +19,12 @@ export abstract class CrudTable<T> {
         this.api?.getPaginatedList().subscribe({
             next: (response) => {
                 this.records = response
-                // this.router.navigate([], {
-                //     queryParams: { start: 0, length: 0 },
-                //     queryParamsHandling: 'merge',
-                // })
             },
             error: (error) => {
                 console.log(error)
             },
         })
     }
-
-    // private getPaginationParams() {
-    //     const { start, length } = this.activatedRoute.snapshot.queryParams
-    //     return { start: start ? parseInt(start) : 0, length: length ? parseInt(length) : 0 }
-    // }
 
     protected openCrudModal(data?: any, id: number | null = null) {
         this.ref = this.dialogService.open(this.modalComponent, {
@@ -47,7 +37,7 @@ export abstract class CrudTable<T> {
             resizable: true,
         })
 
-        this.ref.onClose.subscribe((response) => (response ? (this.getRecords(), console.log(response)) : null))
+        this.ref.onClose.subscribe((response) => (response ? this.getRecords() : null))
     }
 
     protected deleteRecord(id: number, label: string) {

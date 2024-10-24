@@ -49,3 +49,19 @@ Para ejecutar el proyecto en tu máquina local, sigue estos pasos:
     ```
 
 2. Abre tu navegador y accede a `http://localhost:4200/`.
+
+## Credenciales de prueba
+
+Role: Admin
+
+-   Email: admin@admin.com
+-   Password: 123456
+-   Permisos: Read, Write, Delete
+-   Puede ver todas las vistas.
+
+Role: User
+
+-   Email: user@user.com
+-   Password: 123456
+-   Permisos: Read
+-   Sólo puede ver la vista de Posts.
