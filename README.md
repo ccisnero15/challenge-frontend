@@ -2,7 +2,7 @@
 
 ¡Bienvenido al proyecto **Challenge Frontend**! 🎉
 
-Este repositorio contiene una aplicación web construida con [Angular](https://angular.io/). Sigue estos sencillos pasos para configurar y ejecutar el proyecto en tu máquina local.
+Este repositorio contiene una aplicación web construida con [Angular](https://angular.dev/). Sigue estos sencillos pasos para configurar y ejecutar el proyecto en tu máquina local.
 
 ---
 
@@ -10,7 +10,8 @@ Este repositorio contiene una aplicación web construida con [Angular](https://a
 
 Antes de empezar, asegúrate de tener instalado lo siguiente en tu equipo:
 
--   [Node.js](https://nodejs.org/en/) (versión LTS recomendada)
+-   El proyecto fué desarrollado con [Angular CLI] 18.2.1. Tener en cuenta la compatibilidad con node [Versions](https://angular.dev/reference/versions).
+-   [Node.js](https://nodejs.org/en/)
 -   [Angular CLI](https://angular.io/cli): Puedes instalarlo con:
 
     ```bash
