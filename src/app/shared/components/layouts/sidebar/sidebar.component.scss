@@ -51,12 +51,7 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-
-    .ProfileBtn {
-        @media screen and (max-width: 480px) {
-            display: none;
-        }
-    }
+    align-items: center;
 
     hr {
         display: block;
@@ -66,19 +61,6 @@
 
         @media screen and (max-width: 480px) {
             display: none;
-        }
-    }
-
-    .Logout {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        color: #1d4ed8;
-        background-color: transparent;
-        cursor: pointer;
-
-        @media screen and (max-width: 480px) {
-            color: #ffffff;
         }
     }
 
