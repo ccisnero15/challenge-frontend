@@ -77,10 +77,11 @@ Role: User
 ## 🛠️ Tecnologías Utilizadas
 
 -   Angular - Framework para desarrollo frontend
--   TypeScript - Superconjunto de JavaScript
+-   TypeScript - Superset de JavaScript
 -   Signals - Manejo de estado
 -   PrimeNg - Librería de componentes UI
 -   PrimeIcons - Iconos de PrimeNg
 
--   Gracias por su tiempo.
+## Gracias por su tiempo
+
 -   Cisnero, César
