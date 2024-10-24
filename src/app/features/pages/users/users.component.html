@@ -1,5 +1,5 @@
 <div class="card">
-    <h2>Posts</h2>
+    <h2>Users Todos</h2>
     <p-table
         [value]="records"
         [paginator]="true"
@@ -12,8 +12,8 @@
         <ng-template pTemplate="header">
             <tr>
                 <th style="width: 5%">Id</th>
-                <th style="width: 25%">Title</th>
-                <th style="width: 45%">Body</th>
+                <th style="width: 50%">Title</th>
+                <th style="width: 45%">Status</th>
                 @if (authStateService.hasWritePermission()) {
                 <th style="width: 25%">Actions</th>
                 }
@@ -28,7 +28,7 @@
                     <span>{{ record.title }}</span>
                 </td>
                 <td class="p-column-title">
-                    <span>{{ record.body }}</span>
+                    <span>{{ record.completed ? 'Completed' : 'Not Completed' }}</span>
                 </td>
                 @if (authStateService.hasWritePermission()) {
                 <td class="ActionColumn">

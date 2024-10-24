@@ -34,6 +34,7 @@ export class AuthStateService {
     hasReadOnlyPermission = computed(() => this.state().hasReadOnlyPermission)
     hasWritePermission = computed(() => this.state().hasWritePermission)
     userName = computed(() => this.state().userName)
+    roleName = computed(() => this.state().roleName)
 
     // Effects
     effecAuthtState = effect(() => this.localStorageService.setStorage('auth', this.state()))

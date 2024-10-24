@@ -4,11 +4,12 @@ import { SidebarTogglerService } from '../../../services/sidebar-toggler.service
 import { RouterLink, RouterLinkActive } from '@angular/router'
 import { NgClass } from '@angular/common'
 import { AuthStateService } from '../../../state/auth-state.service'
+import { ButtonModule } from 'primeng/button'
 
 @Component({
     selector: 'layout-sidebar',
     standalone: true,
-    imports: [RouterLink, RouterLinkActive, NgClass],
+    imports: [RouterLink, RouterLinkActive, NgClass, ButtonModule],
     templateUrl: './sidebar.component.html',
     styleUrl: './sidebar.component.scss',
     host: { class: 'Sidebar' },

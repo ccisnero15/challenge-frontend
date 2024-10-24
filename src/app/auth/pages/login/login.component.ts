@@ -41,6 +41,7 @@ export class LoginComponent {
                 next: (response) => {
                     if (response) {
                         this.router.navigate(['posts'])
+                        return
                     }
 
                     const data = {

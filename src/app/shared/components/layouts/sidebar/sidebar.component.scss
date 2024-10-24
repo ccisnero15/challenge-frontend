@@ -77,22 +77,6 @@
         background-color: transparent;
         cursor: pointer;
 
-        .MenuIcon {
-            height: 1.25rem;
-            width: 1.25rem;
-            cursor: pointer;
-
-            &--logout {
-                background: url('/assets/svg/sidebar/logout.svg') no-repeat;
-                background-size: contain;
-
-                @media screen and (max-width: 480px) {
-                    background: url('/assets/svg/sidebar/mobile/logout.svg') no-repeat;
-                    background-size: contain;
-                }
-            }
-        }
-
         @media screen and (max-width: 480px) {
             color: #ffffff;
         }
@@ -112,6 +96,7 @@
     margin-top: 3rem;
     overflow-y: auto;
     scrollbar-width: none;
+    list-style-type: none;
 
     &-item {
         &:has(.Menu-item-link > .MenuIcon--qr) {
@@ -133,6 +118,7 @@
         &.active {
             span {
                 font-weight: 600;
+                text-decoration: none;
             }
         }
 
@@ -140,29 +126,6 @@
             height: 1.25rem;
             width: 1.25rem;
             cursor: pointer;
-
-            $iconPath: '/assets/svg/sidebar/';
-            $iconPathMobile: '/assets/svg/sidebar/mobile/';
-            $menuIcons: 'home', 'qr', 'foro', 'obras-sociales', 'cuenta', 'mensajes-directos';
-
-            @each $menuIcon in $menuIcons {
-                &--#{$menuIcon} {
-                    background: url($iconPath + $menuIcon + '.svg') no-repeat;
-                    background-size: contain;
-
-                    @media screen and (min-width: 480px) {
-                        &.is-active {
-                            background: url($iconPath + $menuIcon + '-active.svg') no-repeat;
-                            background-size: contain;
-                        }
-                    }
-
-                    @media screen and (max-width: 480px) {
-                        background: url($iconPathMobile + $menuIcon + '.svg') no-repeat;
-                        background-size: contain;
-                    }
-                }
-            }
         }
     }
 
