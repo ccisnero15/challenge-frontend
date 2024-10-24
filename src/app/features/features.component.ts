@@ -9,9 +9,10 @@ import { StyleClassModule } from 'primeng/styleclass'
 import { SidebarComponent } from '../shared/components/layouts/sidebar/sidebar.component'
 import { SidebarTogglerService } from '../shared/services/sidebar-toggler.service'
 import { AuthStateService } from '../shared/state/auth-state.service'
+import { TopbarComponent } from '../shared/components/layouts/topbar/topbar.component'
 @Component({
     standalone: true,
-    imports: [RouterOutlet, NgClass, SidebarModule, ButtonModule, RippleModule, AvatarModule, StyleClassModule, SidebarComponent],
+    imports: [RouterOutlet, NgClass, SidebarModule, ButtonModule, RippleModule, AvatarModule, StyleClassModule, SidebarComponent, TopbarComponent],
     templateUrl: './features.component.html',
     styleUrl: './features.component.scss',
 })

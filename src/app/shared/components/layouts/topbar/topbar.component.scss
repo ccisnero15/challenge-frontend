@@ -1,0 +1,25 @@
+:host {
+    display: none;
+    padding: 1.5rem;
+
+    @media screen and (max-width: 480px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.Topbar {
+    &-hamburguer {
+        width: 100%;
+        max-width: 2rem;
+        height: 2rem;
+        cursor: pointer;
+    }
+
+    &-logo {
+        width: 100%;
+        max-width: 11.75rem;
+        height: 1.5rem;
+    }
+}
