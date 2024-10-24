@@ -11,12 +11,9 @@
     >
         <ng-template pTemplate="header">
             <tr>
-                <th style="width: 5%">Id</th>
-                <th style="width: 25%">Title</th>
+                <th style="width: 10%">Id</th>
+                <th style="width: 45%">Title</th>
                 <th style="width: 45%">Status</th>
-                @if (authStateService.hasWritePermission()) {
-                <th style="width: 25%">Actions</th>
-                }
             </tr>
         </ng-template>
         <ng-template pTemplate="body" let-record>
@@ -30,12 +27,6 @@
                 <td class="p-column-title">
                     <span>{{ record.completed ? 'Completed' : 'Not Completed' }}</span>
                 </td>
-                @if (authStateService.hasWritePermission()) {
-                <td class="ActionColumn">
-                    <p-button icon="pi pi-pencil" [rounded]="true" class="mr-2" (onClick)="openCrudModal(record, record.id)" />
-                    <p-button icon="pi pi-times" [rounded]="true" severity="danger" (onClick)="deleteRecord(record.id, record.title)" />
-                </td>
-                }
             </tr>
         </ng-template>
     </p-table>

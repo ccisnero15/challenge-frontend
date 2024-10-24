@@ -1,7 +1,7 @@
 <section class="Features">
     <layout-sidebar [ngClass]="{ 'is-open': togglerService.isOpen() }" />
     <main class="Main">
-        <h3>Hi {{ authStateService.userName() }}</h3>
+        <h3>Hello {{ authStateService.userName() }}</h3>
         <router-outlet />
     </main>
 </section>

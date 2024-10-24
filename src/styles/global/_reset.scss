@@ -1,17 +1,101 @@
-// form,
-// input,
-// textarea,
-// select,
-// button,
-// label {
-//     font-family: inherit;
-//     hyphens: auto;
-//     display: block;
-//     appearance: none;
-// }
 * {
     font-family: 'Inter', sans-serif;
 }
+
+*::before,
+*::after {
+    display: block;
+}
+
+*:focus {
+    outline: none;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+}
+
+p a {
+    display: inline;
+}
+
+li {
+    list-style-type: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 100%;
+
+    @media (min-width: 2560px) {
+        font-size: 110%;
+    }
+
+    @media (min-width: 3840px) {
+        font-size: 250%;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em,
+small,
+sup,
+sub,
+code,
+pre {
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    text-decoration: none;
+    color: inherit;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+form,
+input,
+textarea,
+select,
+label {
+    font-family: inherit;
+    hyphens: auto;
+    display: block;
+    appearance: none;
+}
+
+table,
+tr,
+td {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+svg {
+    appearance: none;
+}
+
 body {
     overflow: hidden; // Ocultar la barra de desplazamiento del cuerpo
 }
